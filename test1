@@ -1,0 +1,66 @@
+import java.util.Scanner;
+
+public class TestC {
+    public static void main(String[] args) {
+     PutValue pv = new PutValue();
+     pv.value();
+     pv.generateNum();
+    }
+}
+
+class PutValue
+{
+    int a;
+    int i;
+    int c1;
+    int num;
+    int rev;
+    int rem;
+    int ans;
+    public int value()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println(" Enter your value Here: ");
+        a=sc.nextInt();
+        return a;
+    }
+    public void generateNum() {
+        int d;
+        int n = a;
+
+        for (i = 1; i <= n; i++)
+        {
+            int ic = i;
+                String sn = Integer.toString(ic);
+                int count = sn.length();
+                if(count%2!=0)
+            {
+                c1 = count*2;
+            }
+                else if(count%2==0 && count%4!=0)
+                {
+                    c1=count*3;
+                }
+                else
+                {
+                    c1=count*4;
+                }
+                num=num+c1;
+            }
+while(num!=0)
+{
+            rem = rem+(num % 10);
+            num = num / 10;
+            if(num==0)
+            {
+                if(rem>9)
+                {
+                    num=rem;
+                    rem=0;
+                }
+            }
+
+
+        }
+        System.out.println(rem);
+}}
