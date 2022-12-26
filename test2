@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class MovieTicket {
+
+public static void main(String[] args) {
+   MovieTicket mv = new MovieTicket();
+   mv.person();
+    }
+    int a;
+    int b;
+    int c;
+    int ttl;
+    void person() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your total number of person\n put num of person age less then 3: ");
+        a = sc.nextInt();
+            System.out.println("Put the num of person age greater then 3 and less then 12: ");
+            b = sc.nextInt();
+            System.out.println("Put the num of person age greater then 12: ");
+            c = sc.nextInt();
+          a=a*0;
+          b=b*100;
+          c=c*150;
+          ttl=a+b+c;
+        System.out.println("Your total amount of ticket is:"+ttl);
+
+    }
+}
